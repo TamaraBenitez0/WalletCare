@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    bool ingresoError = ViewBag.IngresoError != null ;
+}
+
+   @section Styles{ <link rel="stylesheet" href="~/css/resultadoIngreso.css" />}
+
+    @if(ingresoError) {
+    <h1>Debes iniciar sesion para realizar esta accion.  <a type="button" href=/Home/Ingresar >Ingresar</a> </h1>
+    } else {
+
+      <div class="alert alert-success" role="alert" id="result">
+    Ingreso de ahorro exitoso.
+
+      <a type="button" href=/User/NuevoAhorro >Volver a ingresar un nuevo ahorro</a>
+      </div>
+
+
+    
+    }

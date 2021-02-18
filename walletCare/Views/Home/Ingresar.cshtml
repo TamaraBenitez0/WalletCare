@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Ingresar";
+    bool loginError = ViewBag.LoginError != null ;
+}
+
+
+@section Styles{ <link rel="stylesheet" href="~/css/registrarse.css" />}
+
+<div className="container-fluid" id="cajaPrincipal"> 
+
+    <div id="wc">WalletCare</div>
+    <form id="formulario" method="POST" asp-action="Ingresar" asp-controller="Home">
+         
+         <div class="form-group">
+         <label for="mail">Ingresar correo electronico</label>
+         <input type="email" placeholder="example@gmail.com" name="email" className="form-control margin-top font-size-weight" aria-describedby="emailHelp"></input>
+            </div>
+
+            <div class="form-group">
+        <label for="mail">Ingresar contraseña</label>
+        <input type="password" placeholder="Contraseña" name="contraseña" className="form-control margin-top font-size-weight" ></input>
+        </div>
+        
+        <button type="submit" class="btn btn-dark margin-top-btn">Iniciar sesión</button>
+
+            @if(loginError) {
+                        <div class="alert alert-danger" role="alert">
+                            El email y/o contraseña no son válidos.
+                        </div>
+
+            }
+        
+
+
+    </form>
+
+
+</div>

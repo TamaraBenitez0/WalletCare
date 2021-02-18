@@ -1,0 +1,46 @@
+
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+@section Styles{ <link rel="stylesheet" href="~/css/nuevoIngreso.css" />}
+
+<div class="container-fluid" id="principio">
+   
+     <div class="ball">
+             </div>
+        <div class="shadow"></div>
+        
+    
+        
+        <div class="columnaDerecha col-md-6 col-sm-12" id="aport">
+            
+            <h1 class="ahorro">Nuevo gasto</h1>
+
+     <form id="formulario" method="POST" asp-action="AgregarGasto" asp-controller="User">
+         
+         <div class="form-group">
+        <img class="foto-a" src="~/images/gasto.png" />
+
+         <label for="gasto" class="ingreso1">Ingresar aporte :</label>
+         <input type="gasto" placeholder="$0" name="gasto" className="form-control margin-top font-size-weight" aria-describedby="emailHelp" id= "dinero"></input>
+            </div>
+
+                <div class="form-group">
+        <label for="nombre" class="ingreso1">Ingresar nombre :</label>
+        <input type="nombre" placeholder="Nombre" name="nombre" className="form-control margin-top font-size-weight" ></input>
+        </div>
+
+            <div class="form-group">
+        <label for="categoria" class="ingreso1">Ingresar categoria :</label>
+    
+        <input type="categoria" placeholder="Categoria" name="categoria" className="form-control margin-top font-size-weight" ></input>
+        </div>
+
+
+            <button type="submit" class="btn btn-dark margin-top-btn" id="guardar">Guardar</button>
+     </form>
+
+        </div>

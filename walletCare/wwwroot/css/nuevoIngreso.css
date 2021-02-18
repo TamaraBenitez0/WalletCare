@@ -1,0 +1,146 @@
+
+body {
+    background-color: #ebf4e9;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin-top:50px;
+  }
+  
+  .ball {
+
+    margin-top:70px;
+    animation: float 3.5s ease-in-out infinite;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+  
+    background: radial-gradient(
+      circle at 75% 30%,
+      white 5px,
+      aqua 8%,
+      darkblue 60%,
+      aqua 100%
+    );
+    box-shadow: inset 0 0 20px #fff, inset 10px 0 46px #eaf5fc,
+      inset 88px 0px 60px #c2d8fe, inset -20px -60px 100px #fde9ea,
+      inset 0 50px 140px #fde9ea, 0 0 90px #fff;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-80px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+  
+  .shadow {
+    background: #b490b2;
+    width: 150px;
+    height: 40px;
+    top: 70%;
+    animation: expand 4s infinite;
+    position: absolute;
+    border-radius: 50%;
+  }
+  @keyframes expand {
+    0%,
+    100% {
+      transform: scale(0.5);
+    }
+  
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .ball {
+      animation: float 4.5s ease-in-out infinite;
+      height: 120px;
+      width: 120px;
+  
+      background: radial-gradient(
+        circle at 65% 35%,
+        white 5px,
+        aqua 15%,
+        darkblue 50%,
+        aqua 100%
+      );
+      box-shadow: inset 0 -20px 30px #fff, inset 40px 0 46px #eaf5fc,
+        inset 58px 0px 60px #c2d8fe, inset -8px -30px 100px #fde9ea,
+        inset 0 20px 110px #fde9ea, 0 0 90px #fff;
+    }
+    .shadow {
+      width: 90px;
+      height: 20px;
+      top: 78%;
+      animation: expand 5s infinite;
+    }
+  
+    @keyframes float {
+      0% {
+        transform: translatey(0px);
+      }
+      50% {
+        transform: translatey(-50px);
+      }
+      100% {
+        transform: translatey(0px);
+      }
+    }
+  }
+
+
+#aport {
+
+  position:relative;
+  bottom:200px;
+  left:250px;
+}
+
+.foto-a {
+
+        margin-top:20px;
+        width: 150px;
+        height: 150px;
+        
+}
+
+#dinero{
+
+    margin-bottom: 30px;
+    margin-left: 20px;
+
+}
+
+.ahorro {
+
+  color:white; text-shadow: black 0.1em 0.1em 0.2em;
+  font-family: 'Lemonada', cursive;
+    font-size:30px;
+    margin-top: 20px;
+}
+
+#guardar{
+
+  margin-top: 20px;
+    background-color: white;
+    color: black;
+
+}
+
+.ingreso1 {
+
+  font-family: cursive;
+
+}

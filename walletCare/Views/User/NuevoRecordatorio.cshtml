@@ -1,0 +1,74 @@
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+
+@section Styles{ <link rel="stylesheet" href="~/css/nuevoRecordatorio.css" />}
+
+<div class="container-fluid" id="principio">
+   
+     <div class="ball">
+             </div>
+        <div class="shadow"></div>
+        
+     <h1 class="recordatorio-titulo">Nuevo recordatorio </h1>
+
+        
+        <div class="columnaDerecha col-md-6 col-sm-12" id="aport">
+            
+           
+     <form id="formulario" method="POST" asp-action="AgregarRecordatorio" asp-controller="User">
+         
+         <div class="form-group">
+      <label for="titulo" class="aspecto">Titulo : </label>
+         <input type="text" name= "titulo" placeholder="Titulo"  className="form-control margin-top font-size-weight" required></input>
+            </div>
+
+             <div class="form-group">
+         <label for="texto" id="descripcion">Texto : </label>
+        <textarea id="w3review" name="texto" rows="4" cols="50">
+
+        </textarea>
+
+         <div class="form-group">
+         <label for="dia" class="aspecto">Ingresar dia : </label>
+         <input type="dia" name= "dia" placeholder="For example:06" className="form-control margin-top font-size-weight" aria-describedby="diaHelp" required></input>
+            </div>
+
+
+            <div class="form-group">
+         <label for="año" class="aspecto">Ingresar año : </label>
+         <input type="año" name= "anio" placeholder="For example:2018" className="form-control margin-top font-size-weight" aria-describedby="añoHelp" required></input>
+            </div>
+
+
+            <div class="form-group">
+         <label for="mes" class="aspecto">Ingresar mes : </label>
+         <input type="mes" name= "mes" placeholder="For example:12" className="form-control margin-top font-size-weight" aria-describedby="mesHelp" required></input>
+            </div>
+
+            <div class="form-group">
+         <label for="hora" class="aspecto">Ingresar hora : </label>
+         <input type="hora" name= "hora" placeholder="For example:02" className="form-control margin-top font-size-weight" aria-describedby="horaHelp" required></input>
+            </div>
+
+
+        <div class="form-group">
+         <label for="minutos" class="aspecto">Ingresar minutos : </label>
+         <input type="minutos" name= "minutos" placeholder="For example:12" className="form-control margin-top font-size-weight" aria-describedby="minutosHelp" required></input>
+            </div>
+
+            </div>
+
+
+
+            <button type="submit" class="btn btn-dark margin-top-btn" id="guardar">Guardar</button>
+     </form>
+
+     
+
+
+        </div>
+
+          <img class="foto-r" src="~/images/pencil.png" />

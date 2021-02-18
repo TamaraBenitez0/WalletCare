@@ -1,0 +1,27 @@
+
+@font-face {
+    font-family: billabong;
+    src:url(Billabong-font.ttf);
+}
+
+#wc{
+
+    font-family: billabong;
+    color: black;
+    font-size: 60px;
+}
+
+.titleC{
+
+    color: black; text-shadow: white 0.1em 0.1em 0.2em;
+    font-size: 150%;
+    
+}
+
+.pC{
+    color: black; text-shadow: white 0.1em 0.1em 0.2em;
+    font-size: 100%;
+    font-weight: 500;
+    
+    
+}

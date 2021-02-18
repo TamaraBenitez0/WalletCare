@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    bool recordatorioError = ViewBag.RecordatorioError != null ;
+}
+
+   @section Styles{ <link rel="stylesheet" href="~/css/resultadoIngreso.css" />}
+
+    @if(recordatorioError) {
+    <h1>Debes iniciar sesion para realizar esta accion.  <a type="button" href=/Home/Ingresar >Ingresar</a> </h1>
+    } else {
+
+      <div class="alert alert-success" role="alert" id="result">
+    Ingreso de recordatorio exitoso.
+
+      <a type="button" href=/User/NuevoRecordatorio >Volver a ingresar un nuevo recordatorio</a>
+      </div>
+
+
+    
+    }

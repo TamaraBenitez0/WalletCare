@@ -1,0 +1,21 @@
+@{
+    
+    bool emailEnUso= ViewBag.MailRegistrado != null;
+}
+
+@if(emailEnUso) {
+
+    <div class="alert alert-danger" role="alert">
+        <span style="color: black;">El mail ingresado ya se encuentra registrado.
+            <a href=/Home/Registrarse>Ir al registro</a> o <a href=/Home/Ingresar>Ingresar</a>
+        </span>
+    </div>
+
+} else {
+
+    <div class="alert alert-success" role="alert">
+    Registro exitoso.  <a href=/Home/Ingresar>Ingresar</a>
+    </div>
+
+}
+

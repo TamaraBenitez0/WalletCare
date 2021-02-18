@@ -1,0 +1,48 @@
+#cajaPrincipal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #DCDCDC;
+    /*border-image: initial; 
+    border: 1px solid grey;*/
+    max-width: 350px;
+    padding: 10px 10px 10px;
+    box-shadow: 2px 2px 5px #999;
+
+}
+
+
+@font-face {
+    font-family: billabong;
+    src:url(Billabong-font.ttf);
+}
+
+#wc{
+
+    font-family: billabong;
+    color: black;
+    text-align: center;
+    font-size: 45px;
+}
+
+#formulario{
+    margin-top: 12px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.font-size-weight {
+    font-weight: lighter;
+    font-size: small;
+}
+
+.margin-top {
+    margin-top: 5px;
+}
+
+
+.margin-top-btn {
+    margin-top: 15px;
+}

@@ -1,0 +1,126 @@
+@model IEnumerable<generico.Models.Recordatorio>
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+
+@section Styles{ <link rel="stylesheet" href="~/css/mostrarIngresos.css" />}
+
+
+
+ <div class="container-fluid">
+
+    
+    
+
+    <div class="row">
+
+
+        @foreach (var item in Model)
+        {
+
+
+            
+            <div class ="col-md-3 col-sm-12" >
+         <div class="paper pink">
+        <div class="tape-section"></div>
+            
+            <ul>
+            
+                <li>Titulo :  @item.Titulo</li>
+                <li>Descripcion : @item.Texto</li>
+                 <li>Fecha a enviar : @item.FechaEnvio</li>
+                </ul>
+                
+            
+              <button type="button" class="btn btn-light"  data-toggle="modal" data-target='#@("deleteITModal"+item.ID)' id="bot"> 
+                  
+                   <img class="foto-e" src="~/images/eliminar.png" />
+                  
+                  </button>
+
+                  <button type="button" class="btn btn-light"  data-toggle="modal" data-target='#@("EnviarModal"+item.ID)' id="bot"> 
+                  
+                   <img class="foto-email" src="~/images/email.png" />
+                  
+                  </button>
+
+
+            </div>
+           
+        </div>
+
+                   
+                   <!-- Modal Enviar-->
+                        <div class="modal fade" id='@("EnviarModal"+item.ID)' tabindex="-1" role="dialog"
+                            aria-labelledby="EnviarModalLabel" data-backdrop="static" data-keyboard="false"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" id="headerModal">
+                                        <h5 class="modal-title" id="EnviarModalLabel">
+                                            <i class="fas fa-exclamation-triangle"></i> Sistema de e-mail
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <form method="POST" asp-action="EnviarAlerta">
+                                        <div class="modal-body" id="bodyModal">
+                                            <input type="hidden" name="Titulo" value="@item.Titulo">
+                                             <input type="hidden" name="Texto" value="@item.Texto">
+                                             <input type="hidden" name="ID" value="@item.ID">
+                                            Enviar alerta a @item.mailUsuario?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-dark" data-dismiss="modal">No</button>
+                                            <button type="submit" class="btn btn-dark">Si</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+       
+                     <!-- Modal Eliminar-->
+                        <div class="modal fade" id='@("deleteITModal"+item.ID)' tabindex="-1" role="dialog"
+                            aria-labelledby="deleteITModalLabel" data-backdrop="static" data-keyboard="false"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" id="headerModal">
+                                        <h5 class="modal-title" id="deleteITModalLabel">
+                                            <i class="fas fa-exclamation-triangle"></i> Atención !
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <form method="DELETE" asp-action="EliminarRecordatorio">
+                                        <div class="modal-body" id="bodyModal">
+                                            <input type="hidden" name="ID" value="@item.ID">
+                                            Estas seguro de querer
+                                            eliminar?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-dark" data-dismiss="modal">No</button>
+                                            <button type="submit" class="btn btn-dark">Si</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+        
+       
+         }
+
+
+     </div>
+    
+      
+ </div>
+ 
+ 

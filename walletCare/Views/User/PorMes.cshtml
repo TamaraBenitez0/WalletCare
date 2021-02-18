@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+
+}
+
+@section Styles{ <link rel="stylesheet" href="~/css/buscarMes.css" />}
+
+  <form id="formulario" method="POST" asp-action="filtrarPorMes" asp-controller="User">
+<label for="Name" id="ingresar">Ingresar nombre del mes :
+</label>
+<input type="text" id="Name" name="mes" />
+
+   <button id="registrar" type="submit" class="btn btn-dark margin-top-btn" id="b">Buscar</button>
+
+
+   <p id="aclaracion">*Aclaracion : Para que esta opcion funcione correctamente deben ingresarse los caracteres tal como se solicita.
+     El primer caracter debe ser en Mayuscula , luego lo siguiente en Minuscula.
+     Por ejemplo: "Diciembre".* </p>
+
+  </form>

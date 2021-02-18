@@ -1,0 +1,50 @@
+#aport {
+
+  margin-top: 35px;
+  border: 1px solid #DCDCDC;
+  box-shadow: 2px 2px 5px #999;
+
+}
+
+.recordatorio-titulo {
+
+  color:white; text-shadow: black 0.1em 0.1em 0.2em;
+  font-family: 'Lemonada', cursive;
+    font-size:30px;
+    margin-top: 20px;
+     
+   
+
+}
+
+.aspecto { 
+
+  font-family: cursive;
+
+}
+
+.foto-r{ 
+
+  position:absolute;
+  bottom: 50%;
+  left: 60%;
+  width: 250px;
+  height: 250px;
+
+}
+
+#descripcion{ 
+
+position: relative;
+  font-family: cursive;
+  margin-bottom: 20px;
+  bottom: 35px;
+ 
+}
+
+#guardar {
+
+  background-color:  #ebf4e9;
+  color: black;
+
+}
